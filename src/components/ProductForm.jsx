@@ -1,22 +1,29 @@
-const ProductForm = () => {
+const ProductForm = ({ handleChange, handleSubmit }) => {
   return (
     <article id="add-product" className="mb-4 mt-4">
       <h1 className="text-center">Product</h1>
-      <form className="p-2">
+      <form className="p-2" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="add-name" className="form-label">
             Product Name
           </label>
-          <input type="text" className="form-control" id="add-name" required />
+          <input
+            onChange={handleChange}
+            type="text"
+            className="form-control"
+            id="name"
+            required
+          />
         </div>
         <div className="mb-3">
           <label htmlFor="add-price" className="form-label">
             Product Price
           </label>
           <input
+            onChange={handleChange}
             type="number"
             className="form-control"
-            id="add-price"
+            id="price"
             required
           />
         </div>
@@ -25,9 +32,10 @@ const ProductForm = () => {
             Product Quantity
           </label>
           <input
+            onChange={handleChange}
             type="number"
             className="form-control"
-            id="add-quantity"
+            id="amount"
             required
           />
         </div>
@@ -39,9 +47,10 @@ const ProductForm = () => {
             https://example.com/
           </span>
           <input
+            onChange={handleChange}
             type="url"
             className="form-control"
-            id="add-image"
+            id="image"
             aria-describedby="basic-addon3"
             required
           />
