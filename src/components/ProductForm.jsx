@@ -1,4 +1,7 @@
-const ProductForm = ({ handleChange, handleSubmit }) => {
+const ProductForm = ({ handleChange, handleSubmit, formData }) => {
+
+
+  
   return (
     <article id="add-product" className="mb-4 mt-4">
       <h1 className="text-center">Product</h1>
@@ -8,6 +11,7 @@ const ProductForm = ({ handleChange, handleSubmit }) => {
             Product Name
           </label>
           <input
+            value={formData.name}
             onChange={handleChange}
             type="text"
             className="form-control"
@@ -20,6 +24,7 @@ const ProductForm = ({ handleChange, handleSubmit }) => {
             Product Price
           </label>
           <input
+            value={formData.price}
             onChange={handleChange}
             type="number"
             className="form-control"
@@ -32,6 +37,7 @@ const ProductForm = ({ handleChange, handleSubmit }) => {
             Product Quantity
           </label>
           <input
+            value={formData.amount}
             onChange={handleChange}
             type="number"
             className="form-control"
@@ -47,6 +53,7 @@ const ProductForm = ({ handleChange, handleSubmit }) => {
             https://example.com/
           </span>
           <input
+            value={formData.image}
             onChange={handleChange}
             type="url"
             className="form-control"

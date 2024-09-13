@@ -30,24 +30,26 @@ const ProductList = () => {
   return (
     <div className="container mt-3">
       <div className={"bg-light d-sm-block d-md-flex"}>
-        <p className="text-center text-danger w-100">Loading....</p>
-
-        <>
-          <article id="product-panel" className="col-md-5">
-            {products.map((product) => (
-              <ProductCard
-                {...product}
-                key={product.id}
-                getProducts={getProducts}
-              />
-            ))}
-          </article>
-          <article className="col-md-5 m-3">
-            <CardTotal products={products} />
-          </article>
-        </>
-
-        <p className="text-center text-danger w-100">No products data...</p>
+        {loading ? (
+          <p className="text-center text-danger w-100">Loading....</p>
+        ) : products.length ? (
+          <>
+            <article id="product-panel" className="col-md-5">
+              {products.map((product) => (
+                <ProductCard
+                  {...product}
+                  key={product.id}
+                  getProducts={getProducts}
+                />
+              ))}
+            </article>
+            <article className="col-md-5 m-3">
+              <CardTotal products={products} />
+            </article>
+          </>
+        ) : (
+          <p className="text-center text-danger w-100">No products data...</p>
+        )}
       </div>
     </div>
   );

@@ -27,7 +27,11 @@ const NewProduct = () => {
 
   return (
     <div className="container">
-      <ProductForm handleChange={handleChange} handleSubmit={handleSubmit} />
+      <ProductForm
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+        formData={formData}
+      />
     </div>
   );
 };
