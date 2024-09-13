@@ -11,11 +11,7 @@ function App() {
 
   return (
     <div className="bg-light app">
-      <Navbar/>
-      <Main/>
-      <About/>
-      <NewProduct/>
-      <ProductList/>
+      
     </div>
   );
 }
