@@ -16,7 +16,7 @@ In this project, I made a shopping application with the data we get from the API
 - API
 - react router dom
 
-#How to install
+# How to install
 
 In the project directory, you can run:
 
