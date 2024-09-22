@@ -20,6 +20,10 @@ In this project, I made a shopping application with the data we get from the API
 
 In the project directory, you can run:
 
+### `npm install`
+
+and
+
 ### `npm start`
 
 
